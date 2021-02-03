@@ -156,6 +156,10 @@ nav {
     right: 24.5%;
 }
 
+.instagram-feed {
+    display: flex;
+    width: 80%;
+}
 
 @keyframes drop {
     0% {

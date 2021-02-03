@@ -114,11 +114,15 @@ nav {
 
 .cover {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 60vh; /* set height of container and then percentage for image */
 }
 
 .cover img {
-    height: 60vh;
+    height: 100%;
     filter: drop-shadow( 0px 5px 3px black); /* Add a filter directly to the image */
+    animation: drop 1.5s ease;
 }
 
 .big-circle {
@@ -142,4 +146,68 @@ nav {
     bottom: 0%;
     left: 20%;
     z-index: -1;
+}
+
+.laptop-select {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 24.5%;
+}
+
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 1049px) {
+    /*
+    body {
+        display: none; */ /* hide all
+    }*/
+    .presentation {
+        flex-direction: column;
+    }
+    .introduction {
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text h1 {
+        font-size: 30px;
+    }
+    .intro-text p{
+        font-size: 18px;
+    }
+    .cta {
+        padding: 10px 0px 0px 0px;
+    }
+    .laptop-select {
+        bottom: 5%;
+        right: 50%;
+        width: 50%;
+        transform: translate(50%, 5%);
+    }
+    .cover img {
+        height: 80%
+    }
+
+    .small-circle,
+    .medium-circle,
+    .big-circle {
+        opacity: 0.2;
+    }
+
+    /* dropdown burger meny if smaller */
+}
+
+@media screen and (max-width: 360px) {
+    /* futher modifications */
 }
